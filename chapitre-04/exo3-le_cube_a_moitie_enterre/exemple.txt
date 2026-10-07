@@ -1,0 +1,5 @@
+4
+unite 1000 0
+tabouret 700 350
+lampe 700 700
+cave 400 -300
