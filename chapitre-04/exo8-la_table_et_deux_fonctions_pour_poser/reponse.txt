@@ -1,0 +1,18 @@
+Lignes avant les fonctions : 36 lignes (28 non vides) dans avant.cpp.
+Chaque centre y est calcule a la main. Le calcul de la moitie de la
+hauteur y est ecrit 7 fois : plateau, quatre pieds, objet au sol,
+objet sur la table.
+
+Lignes apres : 52 lignes (40 non vides) dans poser.cpp.
+Le fichier est plus long de 16 lignes a cause des definitions
+(Vec3, PoserAuSol, PoserSurTable, Afficher), mais la moitie de la
+hauteur n'est plus ecrite que 2 fois.
+
+L'erreur que la fonction m'evite : oublier le /2, c'est-a-dire poser
+le centre a sy au lieu de sy/2.
+Le tabouret (sy = 450) serait a 450 au lieu de 225 : il flotte de
+225 mm.
+La lampe sur la table (sy = 400) serait a 750 + 400 = 1150 au lieu
+de 950 : elle flotte de 200 mm.
+Dans avant.cpp il y a 7 endroits ou cet oubli est possible, dans
+poser.cpp seulement 2, corriges une seule fois pour tous les appels.
