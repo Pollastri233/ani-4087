@@ -1,0 +1,5 @@
+Négligeable : En moyenne, l'écart est faible : 5 mm de position (13 mm au pire) et 770 millièmes de degré de lacet (0,77°), pour une vitesse moyenne de 70 °/s. Mais il n'est pas négligeable image par image : les images 1 et 3 dépassent 1° (1,1° et 2,2°). La moyenne cache les pics, donc l'écart compte quand la tête tourne vite.
+
+Seuil : 1 °/s = 1 millième de degré par ms, donc l'écart de lacet = vitesse × d. Avec d = 11 ms, il dépasse 1° (1000 millièmes de degré) si v × 11 > 1000, soit v > 1000 / 11 ≈ 90,9 °/s. La moyenne mesurée (70 °/s) est sous ce seuil, mais l'image 3 (2200 / 11 = 200 °/s) est au-dessus.
+
+Ce que corrige le compositeur : l'écart entre la pose utilisée pour le rendu et la pose réelle de la tête au moment de l'affichage (reprojection). Pour cela, la couche doit porter la pose du rendu, pas la pose relue à la fin de trame.
